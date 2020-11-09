@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gonga\\OneDrive\\Área de Trabalho\\LTP\\RawIdentity\\Views\\Role\\CreateRole.cshtml",
+      "TargetPath": "Views\\Role\\CreateRole.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gonga\\OneDrive\\Área de Trabalho\\LTP\\RawIdentity\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
