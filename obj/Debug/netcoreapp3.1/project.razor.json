@@ -14422,6 +14422,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gonga\\OneDrive\\Área de Trabalho\\LTP\\RawIdentity\\Views\\Role\\EditRole.cshtml",
+      "TargetPath": "Views\\Role\\EditRole.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gonga\\OneDrive\\Área de Trabalho\\LTP\\RawIdentity\\Views\\Role\\Index.cshtml",
+      "TargetPath": "Views\\Role\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gonga\\OneDrive\\Área de Trabalho\\LTP\\RawIdentity\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
