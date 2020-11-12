@@ -26,9 +26,8 @@
                     <div class="row">
                         <a asp-action="EditRole" asp-controller="Role" class="btn btn-primary mr-1"
                             asp-route-id="@item.Id">Edit</a>
-                        <form asp-action="DeleteRole" asp-controller="Role" asp-route-id="@item.Id" method="POST">
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
+                        <a asp-action="DeleteRole" asp-controller="Role" class="btn btn-primary mr-1"
+                            asp-route-id="@item.Id">Delete</a>
                     </div>
                 </div>
             </div>

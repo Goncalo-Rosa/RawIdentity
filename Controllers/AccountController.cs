@@ -27,6 +27,14 @@ namespace RawIdentity
         {
             return View();
         }
+        [HttpGet]
+
+        public IActionResult ListAllUsers()
+        {
+            var model = _userManager.Users;
+
+            return View(model);
+        }
 
         [HttpPost]
         public async Task<IActionResult> Logout()

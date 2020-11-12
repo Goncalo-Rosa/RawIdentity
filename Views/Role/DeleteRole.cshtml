@@ -1,0 +1,28 @@
+@model Microsoft.AspNetCore.Identity.IdentityRole;
+
+@{
+    ViewBag.Title = "Delete Role";
+}
+
+<h1>Delete Role</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div>
+            <dl>
+                <dt>Role Id</dt>
+                <dl>@Model.Id</dl>
+
+                <dt>Role Name</dt>
+                <dl>@Model.Name</dl>
+            </dl>
+        </div>
+
+        <div>
+            <form asp-action="DeleteRole" asp-controller="Role" method="POST">
+                <button class="btn btn-danger" type="submit">Delete</button>
+                <a asp-action="Index" asp-asp-controller="Role" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

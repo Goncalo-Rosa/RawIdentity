@@ -68,3 +68,4 @@ C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.
 C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Role\CreateRole.cshtml.g.cs
 C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Role\EditRole.cshtml.g.cs
 C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs
+C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Role\DeleteRole.cshtml.g.cs

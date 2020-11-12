@@ -103,11 +103,31 @@ namespace RawIdentity.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> DeleteRole(string Id)
         {
 
             var role = await _roleManager.FindByIdAsync(Id);
+
+            if (role != null)
+            {
+                return View(role);
+            }
+
+            return RedirectToAction("Index", "Role");
+        }
+
+        [HttpPost, ActionName("DeleteRole")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteRoleConfirmed(string Id)
+        {
+
+            var role = await _roleManager.FindByIdAsync(Id);
+
+            if (role == null)
+            {
+                return NotFound();
+            }
 
             var result = await _roleManager.DeleteAsync(role);
 
@@ -118,10 +138,11 @@ namespace RawIdentity.Controllers
 
             foreach (var item in result.Errors)
             {
-                ModelState.AddModelError(item.Code, item.Description);
+                ModelState.AddModelError("", item.Description);
             }
 
-            return RedirectToAction("Index");
+            return View(role);
         }
+
     }
 }
