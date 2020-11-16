@@ -27,6 +27,13 @@ using RawIdentity.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 3 "C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\Views\_ViewImports.cshtml"
+using RawIdentity.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\Views\Role\Index.cshtml"
 using Microsoft.AspNetCore.Identity;
 
@@ -34,7 +41,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e37eaf7d206ad228bf074ab270966044dfe18117", @"/Views/Role/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6fdee6038ec5e05bdd924073b0b4e32f61a185e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"06e055c079e3c374f031335fb5ac4864c6ae3276", @"/Views/_ViewImports.cshtml")]
     public class Views_Role_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<IdentityRole>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "CreateRole", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -88,7 +95,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe181176107", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe181176308", async() => {
                 WriteLiteral("Add New Role");
             }
             );
@@ -133,7 +140,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
             WriteLiteral("</h5>\r\n                </div>\r\n                <div class=\"card-footer\">\r\n                    <div class=\"row\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe181178754", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe181178955", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -167,7 +174,7 @@ using Microsoft.AspNetCore.Identity;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe1811711206", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe1811711407", async() => {
                 WriteLiteral("Delete");
             }
             );
@@ -219,7 +226,7 @@ else
 #line hidden
 #nullable disable
             WriteLiteral("    <div>\r\n        <h3>No Roles</h3>\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe1811714188", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e37eaf7d206ad228bf074ab270966044dfe1811714389", async() => {
                 WriteLiteral("Add New Role");
             }
             );

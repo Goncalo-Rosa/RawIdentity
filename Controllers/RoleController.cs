@@ -7,6 +7,7 @@ using RawIdentity.Models.ViewModels;
 
 namespace RawIdentity.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -17,7 +18,6 @@ namespace RawIdentity.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
         public IActionResult CreateRole()
         {
             return View();
@@ -51,7 +51,6 @@ namespace RawIdentity.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
         public IActionResult Index()
         {
             var roles = _roleManager.Roles;

@@ -14437,6 +14437,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gonga\\OneDrive\\Área de Trabalho\\LTP\\RawIdentity\\Views\\Account\\ManageUserRoles.cshtml",
+      "TargetPath": "Views\\Account\\ManageUserRoles.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gonga\\OneDrive\\Área de Trabalho\\LTP\\RawIdentity\\Views\\Account\\Remove.cshtml",
       "TargetPath": "Views\\Account\\Remove.cshtml",
       "FileKind": "mvc"

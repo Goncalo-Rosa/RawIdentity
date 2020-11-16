@@ -1,0 +1,31 @@
+@model List<ManageUserRolesViewModel>
+
+@{
+    ViewData["Title"] = "Manage User Roles";
+    Layout = "_Layout";
+}
+
+<h1>Manage Roles</h1>
+<h5>@ViewBag.UserName</h5>
+<div>
+    <hr />
+
+    <form asp-action="ManageUsersRoles" asp-controller="Account" method="POST">
+        <input type="hidden" value="@ViewBag.UserId" name="Id">
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            if (Model[i].IsSelected)
+            {
+                <input type="checkbox" checked>
+            }
+            else
+            {
+                <input type="checkbox">
+            }
+            @Model[i].RoleName
+        }
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a asp-action="ListAllUsers" asp-controller="Account" class="btn btn-secondary">Cancel</a>
+        </form>
+
+    </div>

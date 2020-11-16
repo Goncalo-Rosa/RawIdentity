@@ -5,11 +5,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using RawIdentity.Data;
+using RawIdentity.Models;
 using RawIdentity.Models.ViewModels;
 
 
 namespace RawIdentity
 {
+    [Authorize(Roles = "Admin")]
     public class AccountController : Controller
     {
         private readonly MemberShipDbContext _context;
@@ -18,11 +20,12 @@ namespace RawIdentity
         private readonly RoleManager<IdentityRole> _roleManager;
 
 
-        public AccountController(MemberShipDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AccountController(MemberShipDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         [HttpGet]
@@ -42,6 +45,7 @@ namespace RawIdentity
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();

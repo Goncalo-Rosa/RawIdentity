@@ -1,4 +1,4 @@
-namespace RawIdentity
+namespace RawIdentity.Models.ViewModels
 {
     public class ManageUserRolesViewModel
     {
