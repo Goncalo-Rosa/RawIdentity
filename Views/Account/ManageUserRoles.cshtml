@@ -6,26 +6,31 @@
 }
 
 <h1>Manage Roles</h1>
-<h5>@ViewBag.UserName</h5>
-<div>
-    <hr />
+<h2>@ViewBag.UserName</h2>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="ManageUsersRoles" asp-controller="Account" method="POST">
+            <input type="hidden" value="@ViewBag.UserId" name="Id">
 
-    <form asp-action="ManageUsersRoles" asp-controller="Account" method="POST">
-        <input type="hidden" value="@ViewBag.UserId" name="Id">
-        @for (int i = 0; i < Model.Count(); i++)
-        {
-            if (Model[i].IsSelected)
-            {
-                <input type="checkbox" checked>
-            }
-            else
-            {
-                <input type="checkbox">
-            }
-            @Model[i].RoleName
-        }
+            <div class="form-group">
+                @for (int i = 0; i < Model.Count(); i++)
+                {
+                    <input type="hidden" asp-for="@Model[i].RoleId" value="@Model[i].RoleId">
+                    <input asp-for="@Model[i].RoleName" value="@Model[i].RoleName" readonly>
+                    if (Model[i].IsSelected)
+                    {
+                        <input type="checkbox" asp-for="@Model[i].IsSelected" class="form-check-input" checked>
+                    }
+                    else
+                    {
+                        <input type="checkbox" asp-for="@Model[i].IsSelected" class="form-check-input">
+                    }
+                    <span>@Model[i].RoleName</span>
+                }
+            </div>
             <button type="submit" class="btn btn-primary">Update</button>
             <a asp-action="ListAllUsers" asp-controller="Account" class="btn btn-secondary">Cancel</a>
         </form>
-
     </div>
+</div>
