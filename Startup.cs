@@ -32,6 +32,10 @@ namespace RawIdentity
             services.AddDbContext<MemberShipDbContext>(options => options.UseMySql(Configuration.GetConnectionString("MemberShipDBCS")));
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<MemberShipDbContext>();
             services.AddMvc(config => config.Filters.Add(new AuthorizeFilter(new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build())));
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedEmail = true;
+            }).AddEntityFrameworkStores<MemberShipDbContext>().AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="mailkit" Version="2.10.0" />
     <PackageReference Include="microsoft.aspnetcore.identity.entityframeworkcore" Version="3.1.9" />
     <PackageReference Include="microsoft.entityframeworkcore.design" Version="3.1.9">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

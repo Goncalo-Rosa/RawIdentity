@@ -74,3 +74,7 @@ C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.
 C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Account\Details.cshtml.g.cs
 C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Account\Remove.cshtml.g.cs
 C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Account\ManageUserRoles.cshtml.g.cs
+C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\gonga\OneDrive\Área de Trabalho\LTP\RawIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs

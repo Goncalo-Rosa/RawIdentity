@@ -75,8 +75,26 @@ namespace RawIdentity
 
                 if (result.Succeeded)
                 {
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    user = await _userManager.FindByEmailAsync(user.Email);
+                    var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var confirmationLink = Url.ActionLink("ConfirmEmail", "Account", new { userId = user.Id, token = token }, Request.Scheme);
+
+                    var email = new EmailComposer
+                    {
+                        emailAddressSender = "testeemail1@sapo.pt",
+                        emailAddressRecipient = user.Email,
+                        smtpServiceAddress = "smtp.gmail.com",
+                        port = 587,
+                        password = "testeEmail!12345",
+                        subject = "Email Confirmation",
+                        body = "Please confirm your email in order to login on to our RawIdentity web application. Click on the following link...." + confirmationLink,
+                    };
+
+                    email.SendEmail();
+
+                    ViewBag.Message = "We sent you a confirmation request for your email. Plese check your mailbox.";
+                    return View("ConfirmEmail");
+
                 }
 
                 foreach (var error in result.Errors)
@@ -88,6 +106,35 @@ namespace RawIdentity
             return View(model);
         }
 
+        [AllowAnonymous]
+
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+            {
+                return RedirectToAction("Login");
+            }
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                ViewBag.Message = "Account not exists!";
+                return View();
+            }
+
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+
+            if (result.Succeeded)
+            {
+                ViewBag.Result = "Succeded";
+                ViewBag.Message = "Your email is successfully confirmed!";
+                return View();
+            }
+
+            ViewBag.Message = "Your email confirmation failed!";
+            return View();
+        }
+
 
         [HttpPost]
         [AllowAnonymous]
@@ -96,7 +143,13 @@ namespace RawIdentity
             if (ModelState.IsValid)
             {
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: model.RememberMe, lockoutOnFailure: false);
+                var user = await _userManager.FindByEmailAsync(model.Email);
 
+                if (user != null && !user.EmailConfirmed && await _userManager.CheckPasswordAsync(user, model.Password))
+                {
+                    ModelState.AddModelError(string.Empty, "Your Email is not confirmed!");
+                    return View(model);
+                }
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Home");

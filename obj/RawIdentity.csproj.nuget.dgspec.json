@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "mailkit": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
             "microsoft.aspnetcore.identity.entityframeworkcore": {
               "target": "Package",
               "version": "[3.1.9, )"
