@@ -83,8 +83,8 @@ namespace RawIdentity
                     {
                         emailAddressSender = "testeemail1@sapo.pt",
                         emailAddressRecipient = user.Email,
-                        smtpServiceAddress = "smtp.gmail.com",
-                        port = 587,
+                        smtpServiceAddress = "smtp.sapo.pt",
+                        port = 25,
                         password = "testeEmail!12345",
                         subject = "Email Confirmation",
                         body = "Please confirm your email in order to login on to our RawIdentity web application. Click on the following link...." + confirmationLink,

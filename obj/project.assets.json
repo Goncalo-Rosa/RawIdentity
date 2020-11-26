@@ -1551,7 +1551,7 @@
       "mailkit >= 2.10.0",
       "microsoft.aspnetcore.identity.entityframeworkcore >= 3.1.9",
       "microsoft.entityframeworkcore.design >= 3.1.9",
-      "pomelo.entityframeworkcore.mysql >= 3.2.4"
+      "pomelo.entityframeworkcore.mysql >= *"
     ]
   },
   "packageFolders": {
@@ -1607,7 +1607,7 @@
           },
           "pomelo.entityframeworkcore.mysql": {
             "target": "Package",
-            "version": "[3.2.4, )"
+            "version": "[*, )"
           }
         },
         "imports": [

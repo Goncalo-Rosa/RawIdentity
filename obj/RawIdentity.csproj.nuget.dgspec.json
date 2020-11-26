@@ -54,7 +54,7 @@
             },
             "pomelo.entityframeworkcore.mysql": {
               "target": "Package",
-              "version": "[3.2.4, )"
+              "version": "[*, )"
             }
           },
           "imports": [
